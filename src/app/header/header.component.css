@@ -1,0 +1,30 @@
+.navbar{
+  padding: 0 0.8rem;
+  background-color: rgb(153, 243, 189);
+  color: black;
+}
+
+.navbar-brand, .navbar-brand:hover {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: 'Kaushan Script', cursive;
+  color: black;
+}
+
+.navbar-brand:hover{
+  color: rgba(250,250,250);
+}
+
+
+.nav-link{
+  font-size: 1.3rem;
+  min-height: 2.6875rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  color: black !important;
+}
+
+.nav-link:hover{
+  background-color: rgb(40, 223, 153);
+  color: rgba(250,250,250) !important;
+}

@@ -1,0 +1,42 @@
+/*
+#28DF99  rgb(40, 223, 153)
+#99F3BD  rgb(153, 243, 189)
+#d2f6c5  rgb(210, 246, 197)
+#F6F7D4  rgb(246, 247, 212)
+
+*/
+div{
+  background-color: rgb(210, 246, 197);
+}
+
+.recipe-book-header{
+  background-color: rgb(210, 246, 197);
+}
+
+.div-margin-search-bar{
+  padding: 0.5rem 0.625rem;
+}
+
+.div-margin{
+  padding: 0.9375rem 8rem 0.6rem;
+}
+
+.btn-new-recipe{
+  background-color: rgb(154,211,188);
+  border-color:  rgb(154,211,188);
+  color: black;
+  font-style: italic;
+  font-size:  1.1em;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.btn-new-recipe:hover {
+  background-color:rgb(40, 223, 153);
+}
+
+.caligraphic-letters{
+  font-family: 'Kaushan Script', cursive;
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 5rem;
+}

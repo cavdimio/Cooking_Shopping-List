@@ -1,14 +1,25 @@
 <div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-12 div-margin-search-bar">
+    <nav class="navbar navbar-light">
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Find A Recipe" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0 btn-new-recipe" type="submit">Search</button>
+      </form>
+    </nav>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12 div-margin">
+    <button class="btn btn-success my-2 my-sm-0 btn-new-recipe">Add a new Recipe!</button>
+  </div>
+</div>
+
+<div class="row">
   <div class="col-lg-5 col-md-5 col-sm-12">
     <app-recipe-list></app-recipe-list>
   </div>
   <div class="col-md-7 col-lg-7 col-sm-12">
-    <app-recipe-detail
-    *ngIf="selectedRecipe; else infoText"
-    [recipe]="selectedRecipe"
-    ></app-recipe-detail>
-      <ng-template #infoText>
-        <p> Please select Recipe </p>
-      </ng-template>
+    <app-recipe-detail *ngIf="selectedRecipe; else infoText" [recipe]="selectedRecipe"></app-recipe-detail>
+    <ng-template #infoText>
+      <p class="caligraphic-letters"> Please click on a recipe to view the details </p>
+    </ng-template>
   </div>
 </div>

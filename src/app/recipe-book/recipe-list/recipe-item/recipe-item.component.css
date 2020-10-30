@@ -3,14 +3,11 @@ img {
 }
 
 .img-responsive {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   height: 6rem;
   width: 6rem;
   border-radius: 50%;
   padding: auto;
-
+  margin-left: 1rem;
 }
 
 .default-bg-color {
@@ -25,22 +22,6 @@ img {
   padding-right: 0;
 }
 
-a {
-  border-color: rgb(153, 243, 189);
-  color: black;
-  text-decoration: none;
-  border-style: solid;
-  border-width: 0.1rem;
-  border-radius: 12px;
-}
-
-a:hover {
-  color: rgb(210, 246, 197);
-  background-color: rgb(40, 223, 153, 0.9);
-  text-decoration: none;
-  cursor: pointer;
-}
-
 .list-group-item{
   padding: 0.5rem 0.5rem;
 }
@@ -51,9 +32,26 @@ a:hover {
 }
 
 .list-group-item-heading {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   text-align: left;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
-  color: black
 }
+
+a {
+  border-color: rgb(153, 243, 189);
+  color: black;
+  text-decoration: none;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-radius: 12px;
+}
+
+a:hover{
+  color: rgb(210, 246, 197);
+  background-color: rgb(40, 223, 153, 0.9);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+

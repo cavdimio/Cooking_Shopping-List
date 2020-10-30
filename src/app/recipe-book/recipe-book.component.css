@@ -14,7 +14,12 @@ div{
 }
 
 .div-margin-search-bar{
-  padding: 0.5rem 0.625rem;
+  padding: 0.5rem 0.9rem;
+}
+
+.div-margin-search-button{
+  padding-top: 0.5rem;
+  padding-right: 1rem;
 }
 
 .div-margin{
@@ -26,12 +31,13 @@ div{
   border-color:  rgb(154,211,188);
   color: black;
   font-style: italic;
-  font-size:  1.1em;
+  font-size:  1em;
   font-family: 'Kaushan Script', cursive;
 }
 
 .btn-new-recipe:hover {
   background-color:rgb(40, 223, 153);
+  color: rgb(210, 246, 197);
 }
 
 .caligraphic-letters{

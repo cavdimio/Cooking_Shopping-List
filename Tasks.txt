@@ -1,0 +1,12 @@
+New tasks: 
+
+1) Add a new page which appears when the new recipe button is clicked. (For this routing-module will be needed)
+2) Connect above page via express to the mongoDB. 
+3) Insert all the recipes via a local db
+4) Make CSS look better in the recipe folder
+5) Add the tree feature
+6) Add login page
+7) Make the CSS in the todolist look better
+
+
+Completed:

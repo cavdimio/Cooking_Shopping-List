@@ -12,6 +12,8 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListServices } from './shopping-list/shopping-list.service';
 import { AppRoutingModule} from "./app-routing.module";
+import { RecipeMessageComponent } from './recipe-book/recipe-message/recipe-message.component';
+import { RecipeEditComponent } from './recipe-book/recipe-edit/recipe-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,9 @@ import { AppRoutingModule} from "./app-routing.module";
     RecipeDetailComponent,
     RecipeItemComponent,
     ShoppingEditComponent,
-    DropdownDirective
+    DropdownDirective,
+    RecipeMessageComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,

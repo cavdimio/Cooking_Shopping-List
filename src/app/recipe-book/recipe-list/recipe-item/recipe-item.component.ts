@@ -1,6 +1,6 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { Recipe } from '../../recipe.model';
-import { Router } from '@angular/router';
+import { Router, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-item',
@@ -13,9 +13,5 @@ export class RecipeItemComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-  }
-
-  OnSendData(){
-    this.router.navigate(['recipes/'+ this.recipe.id]);
   }
 }

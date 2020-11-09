@@ -8,6 +8,7 @@ import { Router, RouterLinkActive } from '@angular/router';
   styleUrls: ['./recipe-item.component.css']
 })
 export class RecipeItemComponent implements OnInit {
+  /* Recipe to be displayed in the list */
   @Input() recipe : Recipe;
 
   constructor() { }

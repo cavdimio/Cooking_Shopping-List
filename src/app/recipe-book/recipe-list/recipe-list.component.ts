@@ -8,8 +8,10 @@ import { RecipeBookServices} from '../recipe-book.service';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
+  /* List of recipes to be displayed */
   recipes: Recipe[];
 
+  /* RecipeBookServices to outsource the recipes */
   constructor(private recipeBookServices: RecipeBookServices) { }
 
   ngOnInit(): void {

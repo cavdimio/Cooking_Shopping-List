@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Recipe } from './recipe.model';
 import { RecipeBookServices} from './recipe-book.service';
 
@@ -9,14 +9,10 @@ import { RecipeBookServices} from './recipe-book.service';
   providers: [ RecipeBookServices ]
 })
 
-export class RecipeBookComponent implements OnInit, OnDestroy {
-  selectedRecipe : Recipe;
+export class RecipeBookComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  ngOnDestroy(): void {
   }
 
 }

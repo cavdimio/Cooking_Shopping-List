@@ -16,7 +16,6 @@ export class ShoppingListServices {
   }
 
   onAddingNewItem(ingredient: Ingredient){
-
     this.ingredients.push(ingredient);
     this.ingredientsChanged.next(this.ingredients.slice());
   }

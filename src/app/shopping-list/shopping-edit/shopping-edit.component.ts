@@ -29,11 +29,13 @@ export class ShoppingEditComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  /* Add item functionality */
   OnAddItem() {
     const newIngredient = new Ingredient(this.name.nativeElement.value, this.amount.nativeElement.value)
     this.shoppingListServices.onAddingNewItem(newIngredient);
   }
 
+  /* Delete item functionality */
   onDeleteItem() {
     this.shoppingListServices.onDeletingItem({
       name: "Apples",
@@ -41,6 +43,7 @@ export class ShoppingEditComponent implements OnInit {
     });
   }
 
+  /* Clear list functionality */
   OnClearList() {
     this.shoppingListServices.onClearShoppingList();
   }

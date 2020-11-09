@@ -1,3 +1,5 @@
+
+/* */
 import { Component, OnInit} from '@angular/core';
 
 import {  } from 'events';
@@ -8,7 +10,9 @@ import {  } from 'events';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  /* Variable for collapsing the navbar */
   collapsed = true;
+
 
   constructor() { }
 

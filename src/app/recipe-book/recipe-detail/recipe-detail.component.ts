@@ -11,11 +11,14 @@ import { ActivatedRoute, Params } from '@angular/router';
 
 export class RecipeDetailComponent implements OnInit {
   @Input() recipe : Recipe;
+  /* RecipeBookServices in order to show a specific recipe, Router to service routers in html  */
   constructor(private recipeBookServices: RecipeBookServices, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-     this.recipe = this.recipeBookServices.getSpecificRecipe(+this.route.snapshot.params['id']);
+  //   /* For displaying a recipe (only works for first time - optional) */
+  //  this.recipe = this.recipeBookServices.getSpecificRecipe(+this.route.snapshot.params['id']);
 
+   /* For displaying a recipe */
      this.route.params.subscribe(
        (params: Params) => {
          this.recipe = this.recipeBookServices.getSpecificRecipe(+params['id']);

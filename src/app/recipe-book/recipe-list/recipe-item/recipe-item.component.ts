@@ -10,7 +10,7 @@ import { Router, RouterLinkActive } from '@angular/router';
 export class RecipeItemComponent implements OnInit {
   @Input() recipe : Recipe;
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

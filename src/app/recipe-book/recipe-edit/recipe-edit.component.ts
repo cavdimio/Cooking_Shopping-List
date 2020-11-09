@@ -33,7 +33,6 @@ export class RecipeEditComponent implements OnInit {
           this.editMode = false;
         }
       }
-
     )
   }
 

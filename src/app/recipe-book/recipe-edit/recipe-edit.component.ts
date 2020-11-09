@@ -2,6 +2,7 @@ import {
   Component,
   OnInit
 } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import {
   ActivatedRoute,
   Params
@@ -22,6 +23,7 @@ export class RecipeEditComponent implements OnInit {
   /* Boolean that shows whether the app is on edit mode of an existing recipe or on adding a new
   recipe : editMode:true --> edit recipe, editMode:false --> add new recipe */
   editMode = false;
+  recipeForm: FormGroup;
 
   constructor(private route: ActivatedRoute, private recipeBookServices: RecipeBookServices) {}
 
@@ -33,6 +35,7 @@ export class RecipeEditComponent implements OnInit {
         if (params['id']) {
           this.id = +params['id'];
           this.editMode = true;
+          this.initForm();
         } else {
           /* New recipe to be added */
           this.id = this.recipeBookServices.getRecipes().length;
@@ -40,6 +43,28 @@ export class RecipeEditComponent implements OnInit {
         }
       }
     )
+  }
+
+  onSubmit(){
+    console.log(this.recipeForm);
+  }
+
+  private initForm(){
+    let recipeName = '';
+    let recipeImagePath = '';
+    let recipeDescription = '';
+    if (this.editMode){
+      const currentRecipe = this.recipeBookServices.getSpecificRecipe(this.id);
+      recipeName = currentRecipe.name;
+      recipeImagePath = currentRecipe.imagePath;
+      recipeDescription = currentRecipe.description;
+    }
+
+    this.recipeForm = new FormGroup({
+      'name': new FormControl(recipeName),
+      'imagePath': new FormControl(recipeImagePath),
+      'description': new FormControl(recipeDescription)
+    });
   }
 
 }

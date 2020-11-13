@@ -51,4 +51,14 @@ app.get("/recipes", (req, res, next) => {
   });
 });
 
+app.get("/recipes/:id", (req, res) => {
+  Recipe.findOne({_id : req.params.id}).then(documents => {
+    res.status(200).json({
+      message: "Success",
+      recipe: documents
+    });
+  });
+});
+
+
 module.exports = app;

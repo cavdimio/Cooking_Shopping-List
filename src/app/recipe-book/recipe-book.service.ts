@@ -22,8 +22,9 @@ export class RecipeBookServices {
   }
 
   /* Get specific recipe */
-  getSpecificRecipe(id: number){
-    return this.recipes[id];
+  getSpecificRecipe(_id: string): Recipe {
+  const specificRecipeIndex = this.recipes.findIndex(element => element._id === _id);
+  return this.recipes[specificRecipeIndex];
   }
 
   /* For Adding ingredients to shopping List */
@@ -31,20 +32,24 @@ export class RecipeBookServices {
     this.shoppingListServices.onAddingMultipleItems(ingredients);
   }
 
-  updateRecipe(index: number, changedRecipe: Recipe){
-    this.recipes[index] = changedRecipe;
+  updateRecipe(_id: string, changedRecipe: Recipe){
+    //console.log(_id);
+   // console.log(changedRecipe);
+    const recipeIndex = this.recipes.findIndex(element => element._id === _id);
+    //console.log(recipeIndex);
+    this.recipes[recipeIndex] = changedRecipe;
+
     this.recipesChanged.next(this.recipes.slice());
   }
 
-  deleteRecipe(index: number){
-    this.recipes.splice(index, index+1);
-    for(var i=index; i<this.recipes.length; i++){
-      this.recipes[i].id -=1;
-    }
+  deleteRecipe(_id: string){
+    const recipeIndex = this.recipes.findIndex(element => element._id === _id);
+    this.recipes.splice(recipeIndex, recipeIndex+1);
     this.recipesChanged.next(this.recipes.slice());
   }
 
-  deleteIngredient(recipeIndex: number, ingredientIndex: number){
+  deleteIngredient(_id: string, ingredientIndex: number){
+    const recipeIndex = this.recipes.findIndex(element => element._id === _id);
     this.recipes[recipeIndex].ingredients.splice(ingredientIndex, ingredientIndex+1);
     this.recipesChanged.next(this.recipes.slice());
   }

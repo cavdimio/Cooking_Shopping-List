@@ -24,7 +24,7 @@ import { Recipe } from '../recipe.model';
 
 export class RecipeEditComponent implements OnInit {
   /* Id of selected recipe that will be edited */
-  id: number;
+  _id: string;
   /* Boolean that shows whether the app is on edit mode of an existing recipe or on adding a new
   recipe : editMode:true --> edit recipe, editMode:false --> add new recipe */
   editMode = false;
@@ -40,12 +40,12 @@ export class RecipeEditComponent implements OnInit {
     this.route.params.subscribe(
       (params: Params) => {
         /* If id exists, then the user wants to modify the specific recipe */
-        if (params['id']) {
-          this.id = +params['id'];
+        if (params['_id']) {
+          this._id = params['_id'];
           this.editMode = true;
         } else {
           /* New recipe to be added */
-          this.id = this.recipeBookServices.getRecipes().length;
+           //this.id = this.recipeBookServices.getRecipes().length;
           this.editMode = false;
         }
         this.initForm();
@@ -56,7 +56,6 @@ export class RecipeEditComponent implements OnInit {
   onSubmit() {
 
     const newRecipe = new Recipe(
-      this.id,
       this.recipeForm.controls.name.value,
       this.recipeForm.controls.description.value,
       this.recipeForm.controls.imagePath.value,
@@ -65,7 +64,7 @@ export class RecipeEditComponent implements OnInit {
 
     if(this.editMode){
       /* Existing Recipe */
-      this.recipeBookServices.updateRecipe(this.id, newRecipe);
+      this.recipeBookServices.updateRecipe(this._id, newRecipe);
     } else {
       /* New recipe */
       this.dataStorageServices.storeNewRecipe(newRecipe);
@@ -105,7 +104,7 @@ export class RecipeEditComponent implements OnInit {
     let recipeIngredients= new FormArray([]);
 
     if (this.editMode){
-      const currentRecipe = this.recipeBookServices.getSpecificRecipe(this.id);
+      const currentRecipe = this.recipeBookServices.getSpecificRecipe(this._id);
       recipeName = currentRecipe.name;
       recipeImagePath = currentRecipe.imagePath;
       recipeDescription = currentRecipe.description;

@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 
 const recipeSchema = mongoose.Schema({
-  id: { type: Number, required: true },
+  _id: { type: mongoose.Schema.ObjectId, auto: true},
+  //id: { type: Number, required: true },
   name: { type: String, required: true },
   description: { type: String, required: true },
   imagePath: { type: String, required: true },

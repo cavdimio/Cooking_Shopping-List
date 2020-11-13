@@ -11,6 +11,9 @@ import {
 import {
   RecipeBookServices
 } from '../recipe-book.service';
+import {
+  DataStorageServices
+} from "../../shared/data-storage.service";
 import { Recipe } from '../recipe.model';
 
 @Component({
@@ -29,6 +32,7 @@ export class RecipeEditComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private recipeBookServices: RecipeBookServices,
+              private dataStorageServices : DataStorageServices,
               private router: Router) {}
 
   ngOnInit(): void {
@@ -64,7 +68,7 @@ export class RecipeEditComponent implements OnInit {
       this.recipeBookServices.updateRecipe(this.id, newRecipe);
     } else {
       /* New recipe */
-      this.recipeBookServices.addRecipe(newRecipe);
+      this.dataStorageServices.storeNewRecipe(newRecipe);
     }
 
     this.onCancel();

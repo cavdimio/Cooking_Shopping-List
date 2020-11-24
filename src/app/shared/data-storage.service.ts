@@ -40,12 +40,12 @@ export class DataStorageServices {
   }
 
   getSpecificRecipe(_id: string) {
-    this.http.get<{message: string, recipe: Recipe}>("http://localhost:3000/recipes/"+ _id)
-    .map((recipeData) => {
-      console.log(recipeData);
-      this.recipesBookServices.recipes.push(recipeData.recipe);
-      console.log(this.recipesBookServices.recipes);
-      this.recipesBookServices.recipesChanged.next(this.recipesBookServices.recipes.slice());
-    });
+    // this.http.get<{message: string, recipe: Recipe}>("http://localhost:3000/recipes/"+ _id)
+    // .map((recipeData) => {
+    //   console.log(recipeData);
+    //   this.recipesBookServices.recipes.push(recipeData.recipe);
+    //   console.log(this.recipesBookServices.recipes);
+    //   this.recipesBookServices.recipesChanged.next(this.recipesBookServices.recipes.slice());
+    // });
   }
 }

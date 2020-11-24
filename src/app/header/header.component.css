@@ -1,0 +1,31 @@
+.avatar-img{
+  max-width: 3.125rem; /* 50px; */
+  max-height: 3.125rem; /* 50px; */
+  margin-right: 0.5rem !important;
+}
+
+.avatar-img:hover{
+  background-color: blue;
+}
+
+.img-logo{
+  max-width: 3.125rem; /* 50px; */
+  max-height: 2.5rem; /* 40px; */
+}
+
+.navbar{
+  background-color: #D0F1AE;
+}
+
+.form-control{
+  background-color: #F3EBC9;
+  border-radius: 1.5625rem; /* 25px; */
+}
+
+.btn-success{
+  background-color: #66C900;
+  border-color: #66C900;
+}
+
+
+

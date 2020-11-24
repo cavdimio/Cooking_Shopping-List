@@ -1,8 +1,7 @@
 
 /* */
-import { Component, OnInit} from '@angular/core';
-
-import {  } from 'events';
+import { Component, OnInit } from '@angular/core';
+import { RecipeBookServices } from '../recipe-book/recipe-book.service'
 
 @Component({
   selector: 'app-header',
@@ -14,9 +13,12 @@ export class HeaderComponent implements OnInit {
   collapsed = true;
 
 
-  constructor() { }
+  constructor(private recipeBookServices: RecipeBookServices,) { }
 
   ngOnInit(): void {
   }
 
+  onGetRandomRecipe(){
+     //TODO Implement Random Recipe mechanism
+  }
 }

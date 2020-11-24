@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-xs-12">
+  <div class="col-lg-12 col-md-12 col-sm-12">
     <form (ngSubmit)="OnSubmit(f)"
           #f="ngForm">
       <div class="row">
@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-lg-12 col-md-12 col-sm-12">
           <button class="btn btn-success"
                   type="submit"
                   [disabled]="!f.valid">{{editMode ? "Update": "Add" }}</button>

@@ -41,7 +41,7 @@ export class RecipeDetailComponent implements OnInit {
 
      if (!this.recipeBookServices.recipes) {
     //   /* For displaying a recipe directly from the link */
-       this.route.params.map(
+       this.route.params.subscribe(
          (params: Params) => {
            this.dataStorageServices.getSpecificRecipe(params['_id']);
            this.recipe = this.recipeBookServices.getSpecificRecipe(params['_id']);
